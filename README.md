@@ -1,9 +1,4 @@
-<<<<<<< HEAD
-# Drink
-Simulação de uma maquina de refrigerante
-=======
-
-**[Live preview](https://drink-refrigerante.netlify.app/?target=_blank)**
+**[Demo](https://drink-refrigerante.netlify.app/?target=_blank)**
 
 # App - Máquina de refrigerante
 
@@ -11,11 +6,10 @@ O App Drink+ é uma simulação de uma máquina real de refrigerante. Funciona a
 
 ## Tela
 
-![Tela](https://github.com/Wesley-Silva/Drink/blob/main/Drink%2B/img/tela.JPG)
+![Tela](https://github.com/Wesley-Silva/Drink/blob/main/img/tela.JPG)
 
 ## Sobre
 
 Formado em Sistema de Informação e apaixonado por tecnologia, pai do Arthur e gosto muito de games
 
 **[Currículo-Online](https://wesleysilva.netlify.app/?target=_blank)**
->>>>>>> 6dc333aac80f6f988d6ddd22269551a9e87f3cef
