@@ -1,2 +1,2 @@
 # Drink
-Simulação - Máquina de refrigerante
+Simulação de uma maquina de refrigerante
