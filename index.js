@@ -40,4 +40,35 @@ var totalFinal  = 0;
             } 
         })        
     });
+
+    const refriBtn = document.querySelectorAll('.buttons');
+
+    refriBtn.forEach(function(btn) {
+        btn.addEventListener('click', function (event) {
+            //console.log(event.target)
+            if (event.target.parentElement.classList.contains('buttons')) {
+                //console.log(event.target.parentElement.previousElementSibling.src);
+                //console.log(event.target.parentElement.previousElementSibling.textContent);              
+                const item = {};
+
+                var price = event.target.parentElement.previousElementSibling.textContent;  
+                
+                let finalPrice = price.slice(2).trim();
+                item.price = finalPrice;
+
+                const gridItem = document.createElement('tr')
+                //gridItem.classList.add('card-container');
+                gridItem.innerHTML = `                    
+                        <td style="color: #febb0b;" colspan="2">Nome</td>
+                        <td style="color: #febb0b;" colspan="2">${item.price }</td>
+                    
+                `;
+                const cart = document.getElementById('cart2');
+                const total = document.querySelector('.cart-total-container');
+                
+                cart.insertBefore(gridItem, total);                
+            }
+        })
+    })
+
 })();
