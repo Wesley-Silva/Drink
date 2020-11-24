@@ -25,16 +25,24 @@ valor[6] = 5.00;
 
 //var total = [];
 var total = 0;
-var totalFinal  = 0;
+//var totalFinal  = 0;
+// let totalComprado = 0;
+
 (function() {
     const moneyImg = document.querySelectorAll('.money');
 
+    
     moneyImg.forEach(function(img) {
         img.addEventListener('click', function(event) {
+            var totalFinal  = 0;
             if (event.target.classList.contains('money')) {
                 var preco = event.target.attributes.value.nodeValue;
                 var precoConvertido = parseFloat(preco);
-                total = parseFloat(precoConvertido );
+
+                let saldoAtual = document.getElementById('totalGeral').textContent;
+                let saldoAlterado = precoConvertido + parseFloat(saldoAtual);
+
+                total = parseFloat(saldoAlterado);
                 totalFinal += parseFloat(total);
                 document.getElementById('totalGeral').textContent = totalFinal .toFixed(2);
             } 
@@ -56,19 +64,60 @@ var totalFinal  = 0;
                 let finalPrice = price.slice(2).trim();
                 item.price = finalPrice;
 
-                const gridItem = document.createElement('tr')
-                //gridItem.classList.add('card-container');
+
+                var finalPriceConvertido  = parseFloat(finalPrice);
+                let saldoCompra = document.getElementById('totalCompra').textContent;
+
+                
+
+                let totalAtual = document.getElementById('totalGeral').textContent;
+                var saldoCompraConvertido  = parseFloat(saldoCompra);
+                let totalComprado = saldoCompraConvertido + finalPriceConvertido;
+                               
+
+                if (totalAtual < finalPriceConvertido) {
+                    alert('Saldo insuficiente, deposite o dinheiro');
+                    return false;                    
+                }
+
+
+                document.getElementById('totalCompra').textContent = totalComprado;
+
+               
+                var saldoAtualizado = finalPriceConvertido - totalAtual;                
+                let saldoAtualizadoConvertido = Math.abs(saldoAtualizado)
+               
+
+                document.getElementById('totalGeral').textContent = saldoAtualizadoConvertido.toFixed(2);
+
+                const gridItem = document.createElement('tr')                
                 gridItem.innerHTML = `                    
                         <td style="color: #febb0b;" colspan="2">Nome</td>
                         <td style="color: #febb0b;" colspan="2">${item.price }</td>
                     
                 `;
                 const cart = document.getElementById('cart2');
-                const total = document.querySelector('.cart-total-container');
+                const total = document.querySelector('.cart-total-container');                
+                cart.insertBefore(gridItem, total);  
                 
-                cart.insertBefore(gridItem, total);                
+                /*var finalPriceConvertido  = parseFloat(finalPrice);
+                let saldoCompra = document.getElementById('totalCompra').textContent;
+                var saldoCompraConvertido  = parseFloat(saldoCompra);
+                let totalComprado2 = saldoCompraConvertido + finalPriceConvertido;
+                               
+                document.getElementById('totalCompra').textContent = totalComprado2;*/
+
+                //let totalAtual = document.getElementById('totalGeral').textContent;
+                // var saldoAtualizado = finalPriceConvertido - totalAtual;
+                
+                // let saldoAtualizadoConvertido = Math.abs(saldoAtualizado)
+
+                /*if (totalAtual < finalPriceConvertido) {
+                    alert('Saldo insuficiente, deposite o dinheiro');
+                    return false;                    
+                }*/
+                //document.getElementById('totalGeral').textContent = saldoAtualizadoConvertido.toFixed(2);
             }
         })
     })
-
 })();
