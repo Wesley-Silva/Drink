@@ -61,19 +61,20 @@ var total = 0;
                 //console.log(event.target.parentElement.previousElementSibling.textContent);              
                
 
-                const item = {};
+                const item = {};  
 
-                var price = event.target.parentElement.previousElementSibling.textContent;  
-                
+                let nome = event.target.parentElement.previousElementSibling.previousElementSibling.textContent;
+                var price = event.target.parentElement.previousElementSibling.textContent;
+                              
+                let nomeConvertido = nome.slice().trim();
                 let finalPrice = price.slice(2).trim();
-                item.price = finalPrice;
 
+                item.nome = nomeConvertido;
+                item.price = finalPrice;
 
                 var finalPriceConvertido  = parseFloat(finalPrice);
                 let saldoCompra = document.getElementById('totalCompra').textContent;
-
-                
-
+               
                 let totalAtual = document.getElementById('totalGeral').textContent;
                 var saldoCompraConvertido  = parseFloat(saldoCompra);
                 let totalComprado = saldoCompraConvertido + finalPriceConvertido;
@@ -87,7 +88,7 @@ var total = 0;
                     
                             
 
-                document.getElementById('totalCompra').textContent = totalComprado;
+                document.getElementById('totalCompra').textContent = totalComprado.toFixed(2);
 
                
                 var saldoAtualizado = finalPriceConvertido - totalAtual;                
@@ -96,13 +97,13 @@ var total = 0;
 
                 document.getElementById('totalGeral').textContent = saldoAtualizadoConvertido.toFixed(2);
 
-                const gridItem = document.createElement('tr')                
-                gridItem.innerHTML = `                    
-                        <td style="color: #febb0b;" colspan="2">Nome</td>
-                        <td style="color: #febb0b;" colspan="2">${item.price }</td>
+                const gridItem = document.createElement('div')                
+                gridItem.innerHTML = `        
+                        <div class="product">${ item.nome }</div> 
+                        <div class="product">${ item.price }</div>  
                     
                 `;
-                const cart = document.getElementById('cart2');
+                const cart = document.getElementById('conteudo-inserido');
                 const total = document.querySelector('.cart-total-container');                
                 cart.insertBefore(gridItem, total);  
 
@@ -112,7 +113,7 @@ var total = 0;
 
                 while (cont >= 0) {
                     TROCO[cont] = 0;
-                    while (troco >= valor[cont]) {
+                    while (troco.toFixed(2) >= valor[cont]) {
                         TROCO[cont] = TROCO[cont] + 1;
                         troco = troco - valor[cont];
                     }

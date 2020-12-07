@@ -1,3 +1,84 @@
+body {
+  margin: 0;
+}
+
+.product {
+  float: left;
+  width: 46%;
+  height: 50px;
+  margin: 1%;
+  line-height: 50px;
+  text-align: center;
+}
+
+.product:nth-child(1) {
+  background: #111;
+  color: #AAA;
+}
+
+.product:nth-child(2) {
+  background: #222;
+  color: #999;
+}
+
+.product:nth-child(3) {
+  background: #333;
+  color: #888;
+}
+
+.product:nth-child(4) {
+  background: #444;
+  color: #777;
+}
+
+.product:nth-child(5) {
+  background: #555;
+  color: #666;
+}
+
+.product:nth-child(6) {
+  background: #666;
+  color: #555;
+}
+
+.product:nth-child(7) {
+  background: #777;
+  color: #444;
+}
+
+.product:nth-child(8) {
+  background: #888;
+  color: #333;
+}
+
+.product:nth-child(9) {
+  background: #999;
+  color: #222;
+}
+
+.product:nth-child(10) {
+  background: #AAA;
+  color: #111;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 body{
   font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
