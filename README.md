@@ -10,7 +10,7 @@ O App Drink+ é uma simulação de uma máquina real de refrigerante. Funciona a
 - Verificar saldo ✔️
 - Depositar mais dinheiro ✔️
 - Troco ✔️
-- Em Desenvolvimento versão 2 <img src="https://media.giphy.com/media/WUlplcMpOCEmTGBtBW/giphy.gif" width="30">
+- Aplicar uma melhora na usuabilidade da aplicação - versão 2.0.0 <img src="https://media.giphy.com/media/WUlplcMpOCEmTGBtBW/giphy.gif" width="30">
 
 ### Linguagem 
 
