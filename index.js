@@ -99,8 +99,8 @@ var total = 0;
 
                 const gridItem = document.createElement('div')                
                 gridItem.innerHTML = `        
-                        <div class="product">${ item.nome }</div> 
-                        <div class="product">${ item.price }</div>  
+                        <div class="product" style="background-color: #333333;font-weight: bold;color: white; ">${ item.nome }</div> 
+                        <div class="product" style="background-color: #333333;font-weight: bold;color: white; ">${ item.price }</div>  
                     
                 `;
                 const cart = document.getElementById('conteudo-inserido');

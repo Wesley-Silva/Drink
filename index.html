@@ -35,6 +35,69 @@
             <div class="container" style="border:solid 0px white">
                 <!-- Portfolio Section Heading-->
                 <h2 class="page-section-heading text-center text-uppercase text-secondary mb-0" ><span style="color: #03bfcb;">Deposite seu dinheiro</span></h2>
+
+
+                <div class="square">
+                    <div class="block">                        
+                        <div class="centered">
+                            <img src="img/dinheiro/1centavo.jpg" value="0.01" id="1centavo" alt="..." class="rounded-circle money" style="width: 100%">
+                        </div>
+                        
+                    </div>
+                </div>
+                <div class="square">
+                    <div class="block">                        
+                        <div class="centered">
+                            <img src="img/dinheiro/5centavos.png" value="0.05" alt="..." class="rounded-circle money" style="width: 100%">
+                        </div>
+                        
+                    </div>
+                </div>
+                <div class="square">
+                    <div class="block">                        
+                        <div class="centered">
+                            <img src="img/dinheiro/10centavos.jpg" value="0.10" alt="..." class="rounded-circle money" style="width: 100%;"> 
+                        </div>
+                        
+                    </div>
+                </div>
+                <div class="square">
+                    <div class="block">                        
+                        <div class="centered">
+                            <img src="img/dinheiro/25centavos.jpg" value="0.25" alt="..." class="rounded-circle money" style="width: 100%;">
+                        </div>
+                        
+                    </div>
+                </div>
+                <div class="square">
+                    <div class="block">                        
+                        <div class="centered">
+                            <img src="img/dinheiro/50centavos.jpg" value="0.50" alt="..." class="rounded-circle money" style="width: 100%">
+                        </div>
+                        
+                    </div>
+                </div>
+                <div class="square">
+                    <div class="block">                        
+                        <div class="centered">
+                            <img src="img/dinheiro/1real.png" value="1.00" alt="..." class="rounded-circle money" style="width: 100%">
+                        </div>
+                        
+                    </div>
+                </div>
+                <div class="square" >
+                    <div class="block">                        
+                        <div class="centered">
+                            <img src="img/dinheiro/5reais.jpg" value="5.00" alt="..." class="money" style="width: 100%;height: 100%;margin-top: 5px;">
+                        </div>
+                        
+                    </div>
+                </div>
+                <div class="finalSquare1" id="finalSquare1">
+                    <span class="pro"  style="font-size: 25px;width: 130px;color: #febb0b;">Saldo <br>R$ <em id="totalGeral">0.00</em></span>
+                    
+                </div>
+
                 <!-- Icon Divider
                 <div class="divider-custom">
                     <div class="divider-custom-line" style="background-color:#febb0b;"></div>
@@ -44,7 +107,7 @@
 
                 <!-- <div class="container" style="margin-top: -30px;"> -->
                    
-                    <div class="row">
+                    <!-- <div class="row">
                         <div role="main" class="col-md-1 col-md-push-3">
                            tetete
                         </div>
@@ -77,7 +140,7 @@
                     </div>
                     <footer class="row">
                         
-                    </footer>
+                    </footer> -->
                 <!-- </div>   -->
         </section>
 
@@ -122,10 +185,7 @@
 
                     <div class="col-md-6 col-lg-3 mb-5">
                         <div class="card-container">
-                            <span class="pro">Deliciosa</span>
-                            
-
-                            
+                            <span class="pro">Deliciosa</span>                            
                             <img class="round" src="./img/fanta.jpg" alt="user" style="width: 150px;height: 150px;" />
                             <h3>Fanta</h3>
                             <h6>R$ 4.30</h6>                            
@@ -143,53 +203,17 @@
                     <div class="col-md-6 col-lg-3 mb-5" id="cart">
                         <div class="card-container">
                             <div id="container">
-                                <div class="product">Refrigerante</div>
-                                <div class="product">Valor</div>
+                                <div class="product" id="teste"><span style="margin-right: 80px;color: #febb0b;">Refrigerante</span> <span style="margin-right: 30px;color: #febb0b;">Valor</span></div>
+                                <!-- <div class="product">Valor</div> -->
                                 <div id="conteudo-inserido">
-
+                                    
                                 </div>
-                                <hr>
-                                <div class="product">Total</div>
-                                <div class="product" id="totalCompra">0</div>
+                                <!-- <hr  style="border: solid 1px yellow;"> -->
+                                <div class="product" id="teste" style="background-color: #111111;">
+                                    <span style="margin-right: 120px;color: #febb0b;">Total</span> 
+                                    <span style="margin-right: 10px;color: #febb0b;" id="totalCompra">0</span>
+                                </div>
                               </div>
-
-
-
-
-
-                              <br><br>
-                            <hr>
-                            <table class="table">
-                                <thead style="background-color: #febb0b;">
-                                  <tr>                                    
-                                    <th>Refrigerante</th>
-                                    <th>Valor</th>
-                                  </tr>
-                                </thead>
-                                <tbody>                                    
-                                    <td id="cart2"></td>
-                                  <!-- <tr id="cart2"></tr>                                  -->
-                                  <tr style="border:solid 2px #febb0b;">                                    
-                                    <td style="color: #03bfcb;">Total</td>
-                                    <td style="color: #03bfcb;" id="totalCompra"> 0</td>
-                                  </tr>                              
-                                </tbody>
-                              </table>
-                              
-
-                            <!--
-                            <span class="pro">Refrescante</span>
-                            <img class="round" src="./img/sprite.jpg" alt="user" style="width: 150px;height: 150px;" />
-                            <h3>Sprite</h3>
-                            <h6>R$ 3.90</h6>
-                            <div class="buttons">                            
-                                <button class="primary ghost">
-                                    Comprar
-                                </button>
-                            </div>
-                            <div class="skills">
-                                <h6></h6>                            
-                            </div> -->
                         </div>
                     </div>
                 </div>                      
